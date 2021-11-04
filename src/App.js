@@ -1,4 +1,5 @@
 import Home from "./components/pages/home/Home";
+import Single from "./components/pages/single/Single";
 import TopBar from "./components/topbar/TopBar";
 
 
@@ -7,7 +8,7 @@ function App() {
     <>
     <div className="App">
         <TopBar/>
-        <Home/>
+        <Single/>
     </div>
     </>
   );
