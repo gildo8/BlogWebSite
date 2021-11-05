@@ -1,7 +1,4 @@
-import Home from "./components/pages/home/Home";
-import Settings from "./components/pages/settings/Settings";
-import Single from "./components/pages/single/Single";
-import Write from "./components/pages/write/Write";
+import Register from "./components/pages/register/Register";
 import TopBar from "./components/topbar/TopBar";
 
 
@@ -10,7 +7,7 @@ function App() {
     <>
     <div className="App">
         <TopBar/>
-        <Settings/>
+        <Register/>
     </div>
     </>
   );
