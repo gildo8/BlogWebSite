@@ -1,31 +1,28 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import "./post.css"
 
-export default function Post() {
+export default function Post({post}) {
     return (
         <div className="post">
-            <img className="postImg" src="https://i.ibb.co/1bvgKZ4/empire-state-building-3-wallpaper-1920x1080.jpg" alt=""/>
-
+        {post.photo &&(
+            <img className="postImg" src={post.photo} alt=""/>
+        )}
             <div className="postInfo">
                 <div className="postCats">
-                    <span className="postCat">Music</span>
-                    <span className="postCat">Life</span>
+                    {post.categories.map(c=>(
+                        
+                        <span className="postCat">key={ Math.random().toString(36).substr(2, 9) }{c.name}</span>
+                    ))}
+
                 </div>  
-                    <span className="postTitle">Ipsum quis ad nisi cupidatat</span>
+                <Link to={`/post/${post._id}`} className="link">
+                    <span className="postTitle">{post.title}</span>
+                </Link>
                     <hr/>
-                    <span className="postDate">1 hour ago</span>
+                    <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
             </div>
-            <p className="postDesc">
-                Exercitation est nostrud ex deserunt consequat laboris dolore adipisicing duis anim aliqua incididunt et.
-                Occaecat minim eiusmod amet labore occaecat ex culpa cillum consequat. 
-                Deserunt anim ipsum cupidatat ad. Cillum ut excepteur laborum mollit excepteur.
-                Exercitation est nostrud ex deserunt consequat laboris dolore adipisicing duis anim aliqua incididunt et.
-                Occaecat minim eiusmod amet labore occaecat ex culpa cillum consequat. 
-                Deserunt anim ipsum cupidatat ad. Cillum ut excepteur laborum mollit excepteur.
-                Exercitation est nostrud ex deserunt consequat laboris dolore adipisicing duis anim aliqua incididunt et.
-                Occaecat minim eiusmod amet labore occaecat ex culpa cillum consequat. 
-                Deserunt anim ipsum cupidatat ad. Cillum ut excepteur laborum mollit excepteur.
-            </p>
+            <p className="postDesc">{post.desc}</p>
         </div>
     )
 }

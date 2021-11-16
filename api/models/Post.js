@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const PostSchema = new mongoose.Schema({
+    key:{
+        type: String,
+        unique: true,
+    },
     title:{
         type: String,
         required: true,
