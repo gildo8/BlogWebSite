@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import "./post.css"
 
+
 export default function Post({post}) {
     return (
         <div className="post">
@@ -11,8 +12,7 @@ export default function Post({post}) {
             <div className="postInfo">
                 <div className="postCats">
                     {post.categories.map(c=>(
-                        
-                        <span className="postCat">key={ Math.random().toString(36).substr(2, 9) }{c.name}</span>
+                        <span className="postCat">{c.name}</span>
                     ))}
 
                 </div>  
@@ -22,7 +22,7 @@ export default function Post({post}) {
                     <hr/>
                     <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
             </div>
-            <p className="postDesc">{post.desc}</p>
+            <p className="postDesc">{post.desc}</p>     
         </div>
     )
 }
