@@ -53,3 +53,8 @@
     color: white;
     border-radius: 10px;
 }
+
+.errorMessage{
+    color: red;
+    margin: 10px;
+}
