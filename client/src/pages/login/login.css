@@ -48,14 +48,14 @@
     background-color: coral;
 }
 
-.registerButton{
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: teal;
-    cursor: pointer;
-    border: none;
-    padding: 10px;
-    color: white;
-    border-radius: 10px;
+.loginRegisterButton {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: teal;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
 }
