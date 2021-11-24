@@ -18,6 +18,7 @@
 
 .headerTitleLg{
     position: absolute;
+    align-items: baseline;
     top: 20%;
     font-size: 100px;
 }
