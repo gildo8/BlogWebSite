@@ -1,4 +1,5 @@
 # Travel - Blog WebSite
+![alt text](https://i.ibb.co/8bg3cMy/Home.jpg)
 
 A travel blog website i built using MERN - `MongoDB, Express, React, Node.Js` . 
 
